@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+{% load static %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-71oOVCjKFBuYG-8gL4enYavE2-XpQ50&libraries=places&callback=initialize" async defer></script>
+	<script type="text/javascript" src="{% static 'datepicker.js' %}"></script>
+	<script type="text/javascript" src="{% static 'map.js' %}"></script>
+      <script src="js/map.js"></script>
+  </head>
+  <body>
+<label for="from">Data przyjazdu</label>
+<input type="text" id="from" name="from">
+<label for="to">Data odjazdu</label>
+<input type="text" id="to" name="to">
+    <div>
+      Nazwa miejscowości <input type="text" id="address-input">
+      <button onclick="searchAddress();">Szukaj</button>
+    </div>   
+    <div id="map-canvas"></div>
+<div></div>
+  </body>
+</html>
